@@ -1,0 +1,13 @@
+<p>rap-page works!</p>
+<app-navbar></app-navbar>
+
+<div class="main-page-container">
+  <app-search></app-search>
+  <h1 class="tunetalk-title">Expressive Hiphop</h1>
+  <div class="album-list">
+    <app-album-tile
+      *ngFor="let albumTile of rapService.albumIdArray"
+      [albumTile]="albumTile"
+    ></app-album-tile>
+  </div>
+</div>

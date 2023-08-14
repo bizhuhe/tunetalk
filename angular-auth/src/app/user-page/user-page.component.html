@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<div class="background-container">
+  <div class="user-page-container">
+    <h1 class="profile-title">{{ user?.name }}'s Home page</h1>
+
+    <div class="avatar-container">
+      <img class="avatar" [src]="user?.avatar" alt="User Avatar" />
+    </div>
+    <div>
+      <p class="profile-text">{{ user?.bio }}</p>
+    </div>
+
+    <p class="user-review-title">{{ user?.name }}'s Reviews</p>
+    <app-review-tile
+      class="reviews-page-container"
+      *ngFor="let review of reviewDataService.reviews"
+      [review]="review"
+      [currentUser]="authorizeService.currentUser"
+      (reviewDeleted)="handleReviewDeleted()"
+    >
+    </app-review-tile>
+  </div>
+</div>

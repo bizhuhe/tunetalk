@@ -1,0 +1,93 @@
+.album-card {
+  background-color: var(--album-card-background);
+  padding: 20px;
+  text-align: center;
+  width: 280px;
+  height: 380px;
+}
+
+.album-cover {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.album-title {
+  font-size: 18px;
+  font-family: "Arial", sans-serif;
+  color:var(--album-title) ;
+}
+.album-artist {
+    font-size: 18px;
+    font-family: "Arial", sans-serif;
+    color: var(--album-title) ;
+}
+.album-release {
+  font-size: 14px;
+  font-family: "Arial", sans-serif;
+  color: #b7c9d7;
+}
+.review-button {
+  background-color: var( --primary-color);
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .album-card {
+    width: 230px;
+    height: 330px;
+    padding: 15px;
+  }
+  
+  .album-cover {
+    width: 140px;
+    height: 140px;
+   
+  }
+}
+
+/* For screens with a maximum width of 480px */
+@media only screen and (max-width: 480px) {
+  .album-card {
+    width: 200px;
+    height: 280px;
+    padding: 15px;
+  }
+  .album-title {
+    font-size: 15px;
+   
+  }
+  .album-artist {
+      font-size: 15px;
+   
+  }
+  .album-release {
+    font-size: 13px;
+  
+  }
+  
+  .album-cover {
+    width: 120px;
+    height: 120px;
+   
+  }
+  .album-title {
+    font-size: 14px;
+ 
+  }
+  .album-artist {
+      font-size: 14px;
+  
+  }
+  .album-release {
+    font-size: 12px;
+
+  }
+}

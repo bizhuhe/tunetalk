@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "Best Rock";
+  src: url("../../../assets/fonts/best-rock.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Pop & Jazz";
+  src: url("../../../assets/fonts/jazz.ttf") format("truetype");
+}
+@font-face{
+    font-family:"Kingthings Calligraphica Light";
+    src: url("../../../assets/fonts/rap.ttf") format("truetype");
+}
+.carousel {
+    margin-bottom: 50px;
+}
+.carousel-image {
+  height: 400px;
+  width: 700px;
+  object-fit: cover;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.rock-text, .jazz-text, .rap-text {
+  position: absolute;
+ 
+}
+
+
+.rock-text {
+  position: absolute;
+  top: 66%;
+  left: 63%;
+  font-size: 35px;
+  font-family: "Best Rock", sans-serif;
+  color: #000;
+  text-shadow: 2px 2px 4px rgb(245, 243, 243);
+}
+.jazz-text {
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  font-size: 30px;
+  font-family: "Pop & Jazz", sans-serif;
+  color: #a8504c;
+  text-shadow: 2px 2px 4px rgb(245, 243, 243);
+}
+.rap-text{
+  position: absolute;
+top: 17%;
+left: 60%;
+font-size: 40px;
+font-family: "Kingthings Calligraphica Light", sans-serif;
+color:  #fff;
+text-shadow: 2px 2px 4px rgb(15, 14, 14);
+}
+.carousel-item p {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 16 16'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 0 .708L10.293 8l-5.647 5.646a.5.5 0 0 1 .708 .708l6-6a.5.5 0 0 1 0-.708l-6-6a.5.5 0 0 1-.708 0z'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 767px) {
+  .carousel-image {
+    height: 200px;
+    width: 350px;
+  }
+  .jazz-text {
+    font-size:20px;
+  }
+  .rap-text{
+    font-size:30px;
+    top: 25%;
+    left: 74%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .carousel-image {
+    height: 300px;
+    width: 500px;
+  }
+  .jazz-text {
+    font-size:25px;
+  }
+  .rap-text{
+    font-size:35px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel-image {
+    height: 400px;
+    width: 700px;
+  }
+  .jazz-text {
+    font-size:25px;
+  }
+  .rap-text{
+    font-size:38px;
+  }
+}

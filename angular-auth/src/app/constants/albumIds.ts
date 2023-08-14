@@ -1,0 +1,4 @@
+export const TRENDING_SONGS = '37i9dQZF1DXcBWIGoYBM5M';
+export const ROCK = '37i9dQZF1EQpj7X7UK8OOF';
+export const JAZZ = '37i9dQZF1DWV7EzJMK2FUI';
+export const RAP = '37i9dQZF1DX48TTZL62Yht';

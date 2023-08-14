@@ -1,0 +1,33 @@
+<div class="rating-page-container">
+  <h2 class="rating-title">TuneTalk Rating</h2>
+  <span class="average-rating"> {{ averageRating }}</span>
+  <span class="rating-number"> {{ numberOfRatings }} </span>
+  <span class="rating-number-static-text">
+    {{ numberOfRatings === 1 ? "Review" : "Reviews" }}
+  </span>
+  <div class="rating-detail-text">
+    <span class="label">5 Stars: </span>
+    <div class="bar" [style.width]="percentageFiveStars"></div>
+    <span class = "percentage-text"> {{ percentageFiveStars }}</span>
+  </div>
+  <div class="rating-detail-text">
+    <span class="label">4 Stars: </span>
+    <div class="bar" [style.width]="percentageFourStars"></div>
+    <span class = "percentage-text"> {{ percentageFourStars }}</span>
+  </div>
+  <div class="rating-detail-text">
+    <span class="label">3 Stars: </span>
+    <div class="bar" [style.width]="percentageThreeStars"></div>
+    <span class = "percentage-text"> {{ percentageThreeStars }}</span>
+  </div>
+  <div class="rating-detail-text">
+    <span class="label">2 Stars: </span>
+      <div class="bar" [style.width]="percentageTwoStars"></div>
+    <span class = "percentage-text"> {{ percentageTwoStars }}</span>
+  </div>
+  <div class="rating-detail-text">
+    <span class="label">1 Star: </span>
+      <div class="bar one-star-bar" [style.width]="percentageOneStar"></div>
+    <span class = "percentage-text"> {{ percentageOneStar }}</span>
+  </div>
+</div>

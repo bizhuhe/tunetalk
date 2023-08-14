@@ -1,0 +1,8 @@
+<div (click)="openAlbumTile()" style="cursor: pointer;"class="album-card">
+  <img [src]="albumTile?.image" alt="Album Cover" class="album-cover" />
+  <h2 class="album-title">{{ albumTile?.name | slice:0:40 }}</h2>
+  <p class="album-artist" *ngIf="albumTile?.artists">
+    {{ albumTile?.artists.join(', ') }}
+  </p>
+  <p class="album-release">Release date: {{ albumTile?.release }}</p>
+</div>

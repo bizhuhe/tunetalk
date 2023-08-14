@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div class="reviews-page-container">
+  <div class="search-container">
+    <input [(ngModel)]="searchTerm" placeholder="Search reviews" (keyup)="loadReviews()" />
+  </div>
+  
+  <h2 class="tunetalk-title">Latest Reviews</h2>
+  <div *ngFor="let review of getDisplayedReviews(); let i = index">
+    <app-review-tile
+      [review]="review"
+      [currentUser]="review.user"
+      (reviewDeleted) = "reviewDataService.handleReviewDeleted(review)"
+      (editingChange)="handleEditingChange($event)"
+    ></app-review-tile>
+
+  </div>
+  <div class="pagination-container">
+    <i class="pi pi-angle-left" [class.disabled]="pageNumber === 1" (click)="previousPage()"></i>
+    <span class="page-text">Page {{pageNumber}}</span>
+    <i class="pi pi-angle-right" [class.disabled]="pageNumber >= getTotalPages()" (click)="nextPage()"></i>
+</div>
+
+  
+    </div>

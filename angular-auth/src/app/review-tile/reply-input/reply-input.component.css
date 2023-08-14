@@ -1,0 +1,29 @@
+.reply-display-container {
+    margin-left: 50px;
+    margin-top: 20px;
+  }
+  .replied-at {
+    font-style: italic;
+    color: var(--album-label);
+  }
+  .user-name {
+    color: var(--album-text-color);
+  }
+  .reply {
+    margin-left: 15px;
+    color: var(--album-text-color);
+  }
+  .submit-button {
+    width: 20%;
+    background-color: #8a7ad2;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .reply-input-container {
+    display: flex;
+    flex-direction: column;
+  }

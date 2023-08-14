@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<div class="album-detail-container">
+
+  <div class = "search-container"> 
+  <app-search></app-search>
+</div>
+<div class = "album-detail-rating-container">
+  <app-album-detail-tile class = "album-tile"></app-album-detail-tile>
+  <app-rating-board></app-rating-board>
+</div>
+ 
+  <div class="review-container">
+    <button class="review-button" (click)="openReviewInput()">
+      Create a Review
+    </button>
+    <app-review-input *ngIf="showReviewInput" (reviewSubmitted)="hideReviewInput()"></app-review-input>
+  </div>
+  <app-current-album-reviews class = "album-reviews"></app-current-album-reviews>
+</div>
+
+

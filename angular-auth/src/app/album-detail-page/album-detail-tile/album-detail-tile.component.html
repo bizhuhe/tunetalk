@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+<div class="album-detail-page-container">
+  <h2 class="album-title">{{ album?.name }}</h2>
+  <div class="album-detail-card">
+    <div class="album-details">
+      <img [src]="album?.image" alt="Album Cover" class="album-cover" />
+      <div>
+        <p class="album-detail-text">
+          <span class="label">Artist(s):</span>
+          <span class="value">{{ album?.artists }}</span>
+        </p>
+        <p class="album-detail-text">
+          <span class="label">Release date: </span>
+          <span class="value">{{ album?.release | date:'mediumDate' }}</span>
+
+        </p>
+
+        <p class="album-detail-text">
+          <span class="label">Popularity: </span>
+          <span class="value">{{ album?.popularity }}</span>
+        </p>
+        <p class="album-detail-text">
+          <span class="label">Album type: </span>
+          <span class="value">{{ album?.albumType }}</span>
+        </p>
+        <p class="album-detail-text">
+          <span class="label">Disc Number: </span>
+          <span class="value">{{ album?.discNumber }}</span>
+        </p>
+
+        <p class="album-detail-text">
+          <span class="label">Track Number: </span>
+          <span class="value">{{ album?.trackNumber }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<div
+  id="carouselExample"
+  class="carousel slide"
+  data-bs-ride="carousel"
+  style="cursor: pointer"
+>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div (click)="openRockPage()" class="image-container">
+        <img
+          src="../../../assets/images/fall-out-boys.jpg"
+          class="d-block mx-auto carousel-image"
+          alt="Slide 1"
+        />
+        <p class="rock-text">Energetic Rock</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div (click)="openJazzPage()" class="image-container">
+        <img
+          src="../../../assets/images/jazz-cover.jpg"
+          class="d-block mx-auto carousel-image"
+          alt="Slide 2"
+        />
+        <p class="jazz-text">Soulful Jazz</p>
+      </div>
+    </div>
+    <div class="carousel-item" >
+      <div (click)="openRapPage()" class="image-container">
+        <img
+          src="../../../assets/images/kendrick-cover.jpg"
+          class="d-block mx-auto carousel-image"
+          alt="Slide 3"
+        />
+        <p class="rap-text">Expressive Hiphop</p>
+      </div>
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExample"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExample"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

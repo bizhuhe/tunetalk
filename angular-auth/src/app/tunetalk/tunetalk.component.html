@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+
+<div class="main-page-container">
+  <app-search></app-search>
+  <h1 class="tunetalk-title">Welcome to Tunetalk</h1>
+  <p class="tunetalk-subtitle">Share your music taste</p>
+  <app-carousel></app-carousel>
+  <h3 class="tunetalk-trending-title">Now Trending</h3>
+
+  <div class="album-list">
+    <app-album-tile
+      *ngFor="let albumTile of tunetalkService.albumIdArray"
+      [albumTile]="albumTile"
+    ></app-album-tile>
+  </div>
+</div>

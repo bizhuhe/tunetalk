@@ -1,0 +1,14 @@
+<div class="reviews-page-container">
+  <ng-container *ngIf="reviewDataService.reviews !== undefined">
+    <div class="row" *ngIf="reviewDataService.reviews.length > 0">
+      <app-review-tile
+      *ngFor="let review of reviewDataService.reviews"
+        [review]="review"
+        [currentUser]="review.user"
+        [displayAlbumInfo]="false"
+        (reviewDeleted)="reviewDataService.handleReviewDeleted(review)"
+        (editingChange)="handleEditingChange($event)"
+      ></app-review-tile>
+    </div>
+  </ng-container>
+</div>

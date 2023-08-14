@@ -1,0 +1,46 @@
+/* theme colors 
+#2596be
+#b7c9d7
+#eee2e0
+#8ce1a2
+#8a7ad2
+#85bfc8
+#305fc4
+*/
+.search-container {
+    margin-bottom: 10px;
+    margin-top: 40px; 
+    display: flex;
+    align-items: center;
+  }
+  .search-container input {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+  }
+  .search-container button {
+    background-color: #8a7ad2;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+  .search-container button:hover {
+    background-color: #7d69d7;
+  }
+  .result-container {
+    padding: 20px 10px;
+    background-color: #f0f0f0;
+  }
+  
+  .album-image {
+    width: 100px; /* Adjust the width to your preference */
+    height: auto; /* Maintain aspect ratio */
+  }
+  

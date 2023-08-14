@@ -1,0 +1,96 @@
+.album-detail-tile-container {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+.album-detail-card {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+.album-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.album-cover {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  margin-right:20px;
+
+}
+
+.album-title {
+  margin-top: 80px;
+  margin-left: 50px;
+  font-size: 18px;
+  font-family: "Arial", sans-serif;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var( --album-text-color);
+}
+.label {
+  color: var(--album-label);
+}
+
+.album-detail-text {
+  font-size: 15px;
+  font-family: "Arial", sans-serif;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  color:var( --album-text-color);
+}
+@media only screen and (max-width: 768px) {
+  .album-detail-page-container {
+    margin-left: 30px;
+  }
+  .album-title {
+    margin-top: 40px;
+  }
+  .album-cover {
+    width: 140px;
+    height: 140px;
+  }
+  .album-detail-text {
+    font-size: 12px;
+
+  }
+  .album-detail-card {
+    margin-left: 0px;
+  }
+  
+  .album-title {
+    margin-left: 0px;
+  }
+}
+
+/* For screens with a maximum width of 480px */
+@media only screen and (max-width: 480px) {
+  .album-detail-page-container {
+    margin-left: 20px;
+  }
+  .album-title {
+    margin-top: 20px;
+  }
+  .album-cover {
+    width: 90px;
+    height: 90px;
+  }
+  .album-detail-text {
+    font-size: 10px;
+
+  }
+  .album-detail-card {
+    margin-left: 0px;
+  }
+  .album-title {
+    margin-left: 0px;
+  }
+}

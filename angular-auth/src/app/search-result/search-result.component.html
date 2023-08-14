@@ -1,0 +1,13 @@
+
+<app-navbar></app-navbar>
+
+<div class="result-container">
+  <app-search></app-search>
+  <div class="result-list">
+    <app-album-tile
+      *ngFor="let albumTile of storedResults"
+      [albumTile]="albumTile"
+    ></app-album-tile>
+  </div>
+</div>
+

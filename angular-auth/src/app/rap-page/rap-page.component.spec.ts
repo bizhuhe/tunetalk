@@ -1,0 +1,44 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { RapPageComponent } from './rap-page.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { NavbarComponent } from '../navbar/navbar.component';
+import { StsConfigLoader, ConfigurationService } from 'angular-auth-oidc-client';
+import { SearchComponent } from '../search/search.component';
+import { of } from 'rxjs';
+import { ThemeSwitcherComponent } from '../theme-switcher/theme-switcher.component';
+describe('RapPageComponent', () => {
+  let component: RapPageComponent;
+  let fixture: ComponentFixture<RapPageComponent>;
+  let mockStsConfigLoader: any;
+  let mockConfigurationService: any;
+  beforeEach(() => {
+    mockStsConfigLoader = {
+      loadConfigs: jasmine.createSpy('loadConfigs').and.returnValue(of({ 
+        clientId: 'mockClientId',
+        server: 'mockServer',
+        redirectUrl: 'mockRedirectUrl'
+      }))
+    };
+
+    mockConfigurationService = {
+      getOpenIDConfigurations: jasmine.createSpy('getOpenIDConfigurations').and.returnValue(of({ /* mock return data */ })),
+  
+    };
+    TestBed.configureTestingModule({
+      declarations: [RapPageComponent, NavbarComponent, SearchComponent, ThemeSwitcherComponent],
+      imports:[HttpClientTestingModule, FormsModule],
+      providers: [
+        { provide: StsConfigLoader, useValue: mockStsConfigLoader },
+        { provide: ConfigurationService, useValue: mockConfigurationService }
+      ],
+    });
+    fixture = TestBed.createComponent(RapPageComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

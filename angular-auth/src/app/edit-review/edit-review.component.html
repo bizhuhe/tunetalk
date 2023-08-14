@@ -1,0 +1,38 @@
+
+<div class = "review-input-container">
+    <form autocomplete="off" #reviewForm="ngForm" (ngSubmit)="submitForm(reviewForm)">
+      <div class="rating-container">
+
+        <label for="rating">Rating:</label>
+        <div style="display: flex; justify-content: space-between; width: 100px">
+            <div>
+              <input type="radio" name="stars" id="star1" [value]="1" required [(ngModel)]="review.rating"/><br />
+              <label for="star1">1</label>
+            </div>
+            <div>
+              <input type="radio" name="stars" id="star2" [value]="2" [(ngModel)]="review.rating"/><br />
+              <label for="star2">2</label>
+            </div>
+            <div>
+              <input type="radio" name="stars" id="star3" [value]="3" [(ngModel)]="review.rating"/><br />
+              <label for="star3">3</label>
+            </div>
+            <div>
+              <input type="radio" name="stars" id="star4" [value]="4" [(ngModel)]="review.rating"/><br />
+              <label for="star4">4</label>
+            </div>
+            <div>
+              <input type="radio" name="stars" id="star5" [value]="5" [(ngModel)]="review.rating"/><br />
+              <label for="star5">5</label>
+            </div>
+          </div>
+      </div>
+  
+      <div class="comment-container">
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" [(ngModel)]="review.comment"></textarea>
+      </div>
+  
+      <button class = "submit-button" type="submit">Submit</button>
+    </form>
+  </div>

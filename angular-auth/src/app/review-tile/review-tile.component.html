@@ -1,0 +1,88 @@
+<div class="review-tile">
+  <div class="button-wrapper">
+    <i
+      *ngIf="authorizeService.currentUser?.email === review.user"
+      class="pi pi-trash delete-icon"
+      (click)="deleteReview(review._id)"
+    ></i>
+
+    <i
+      *ngIf="authorizeService.currentUser?.email === review.user"
+      class="pi pi-pencil edit-icon"
+      (click)="editReview(review._id)"
+    ></i>
+  </div>
+
+  <p *ngIf="displayAlbumInfo" class="song-name">{{ review.songName }}</p>
+  <div class="review-format-container">
+    <div *ngIf="displayAlbumInfo" class="cover">
+      <img
+        (click)="onAlbumClick(review.song)"
+        [src]="review.image"
+        alt="Album Cover"
+        class="album-cover"
+      />
+    </div>
+    <div class="review-content">
+      <div class="review-header">
+        <h5 (click)="onUserClick(review.user)" class="user-name">
+          {{ review.userName }}
+        </h5>
+
+        <span class="reviewed-at">
+          {{ review.createdAt | date : "medium" }}
+        </span>
+      </div>
+
+      <div class="rating-container">
+        <span class="rating-text">Rating:</span>
+        <ng-container *ngIf="review.rating !== null">
+          <ng-container
+            *ngFor="let star of reviewDataService?.getStars(review.rating)"
+          >
+            <span class="star" [ngClass]="{ filled: star }"></span>
+          </ng-container>
+        </ng-container>
+      </div>
+      <p class="comment">
+        <span class="font-weight-bold">Comment:</span>
+        {{ review.comment }}
+      </p>
+    </div>
+  </div>
+
+  <app-edit-review
+    *ngIf="editing"
+    [initialRating]="initialRating"
+    [initialComment]="initialComment"
+    [editMode]="true"
+    [review]="review"
+    (collapseForm)="hideReviewInput()"
+    (reviewSubmitted)="handleReviewEdited($event)"
+  ></app-edit-review>
+  <div class="social-icons">
+
+    <i
+      class="pi pi-comment reply-icon"
+      (click)="clickReply()"
+      style="z-index: 10000"
+    ></i>
+    <span class = "reply-number">{{ totalReplies }}</span>
+
+    <i class="pi pi-share-alt share-icon" (click)="shareReview(review)"></i>
+    <i
+      [class]="
+        review.likes > 0
+          ? 'pi pi-heart-fill like-icon'
+          : 'pi pi-heart like-icon'
+      "
+      (click)="likeReview()"
+    ></i>
+    <span class="like-number">{{ review.likes }}</span>
+  </div>
+  <app-reply-input
+    *ngIf="showReplyInput"
+    [review]="review"
+    (totalReplies)="handleTotalReplies($event)"
+  ></app-reply-input>
+</div>

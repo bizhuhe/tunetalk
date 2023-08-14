@@ -1,0 +1,42 @@
+.dialog-container{
+    margin: 40px
+}
+.dialog-title {
+    text-align: center;
+    padding-top:20px;
+    margin-bottom: 20px;
+    color: #8a7ad2;
+  }
+  
+  .user-name {
+    cursor: pointer;
+    transition: background-color 0.3s ease;  
+  }
+  
+  .user-name:hover {
+    background-color: #f0f0f0;  
+    color: #000; 
+  }
+  
+.dialog-button-container{
+    display: flex;
+    justify-content: center;
+}
+.dialog-button{
+    border: 1px solid #8a7ad2;
+    color: #8a7ad2;
+    background-color: white;
+    padding: 5px 10px;  
+    font-size: 0.8em;  
+    border-radius: 4px;  
+    transition: background-color 0.3s ease;  
+    margin-bottom: 20px;
+}
+.dialog-button:hover {
+    background-color: #8a7ad2;
+    color: white;
+  }
+.no-button{
+    color: #da6382;
+    margin-right: 10px; 
+}

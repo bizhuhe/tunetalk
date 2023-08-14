@@ -1,0 +1,83 @@
+/* theme colors 
+#2596be
+#b7c9d7
+#eee2e0
+#8ce1a2
+#8a7ad2
+#85bfc8
+#305fc4
+*/
+@font-face {
+  font-family: "Best Rock";
+  src: url("../../assets/fonts/best-rock.ttf") format("truetype");
+}
+
+.main-page-container {
+  padding: 60px;
+  background-image:var(--background-image); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.tunetalk-title {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding:30px;
+  font-family: "Best Rock", sans-serif;
+  animation: pulsate 2s infinite;
+  color: #eee2e0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.tunetalk-title:hover {
+  transform: scale(1.1);
+}
+
+.tunetalk-subtitle {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-align: end;
+  margin-left: 20px;
+  font-family: 'Best Rock', sans-serif;
+  text-shadow: 2px 2px 4px #fff(0, 0, 0, 0.5);
+}
+
+.tunetalk-trending-title {
+  font-size: 24px;
+  color: #eee2e0;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Best Rock', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.album-list {
+  display: grid;
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+@media (min-width: 625px) {
+  /* For screens with a minimum width of 768px (e.g., tablets) */
+  .album-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1003px) {
+  /* For screens with a minimum width of 768px (e.g., tablets) */
+  .album-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1430px) {
+  /* For screens with a minimum width of 768px (e.g., tablets) */
+  .album-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+
+

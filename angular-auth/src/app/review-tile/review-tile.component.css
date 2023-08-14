@@ -1,0 +1,186 @@
+.review-tile {
+  background-color: var(--review-tile-background-color);
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+  z-index: 10000;
+}
+
+.review-format-container {
+  display: flex;
+  margin-top: 10px;
+}
+.album-cover {
+  height: 120px;
+  width: 120px;
+  cursor: pointer;
+}
+.song-name {
+  color: var(--album-title);
+  font-weight: bold;
+}
+.review-content {
+  margin-left: 30px;
+}
+.song-name {
+  margin-bottom: 0px;
+}
+.rating-container {
+  display: flex;
+  align-items: center;
+}
+.review-header {
+  display: flex;
+  align-items: baseline;
+}
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pi:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.delete-icon {
+  margin-right: 10px;
+  color: var(--social-icon-pink);
+}
+.edit-icon {
+  color: var(--social-icon-purple);
+  margin-right: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 8px;
+  margin-left: 30px;
+}
+/* remove margin-right from the last icon */
+.social-icons i:last-child {
+  margin-right: 0;
+}
+.reply-icon {
+  color: var(--social-icon-purple);
+  margin-right: 2px;
+  cursor: pointer;
+}
+.reply-number {
+  color: var(--social-icon-purple);
+  margin-right: 20px;
+}
+.share-icon {
+  color: var(--social-icon-purple);
+  margin-right: 20px;
+  cursor: pointer;
+}
+.like-section {
+  display: flex;
+  align-items: center;
+}
+
+.like-icon {
+  color: var(--social-icon-pink);
+  margin-right: 4px;
+  cursor: pointer;
+}
+.like-icon.liked {
+  content: "\f004";
+}
+
+.like-number {
+  color: var(--social-icon-pink);
+}
+.user-name {
+  font-size: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+  color: var(--album-text-color);
+}
+.user-name:hover {
+  font-size: 19px;
+  color: var(--social-icon-purple);
+}
+
+.reviewed-at {
+  font-style: italic;
+  color: var(--album-label);
+}
+
+.rating-text {
+  margin-top: 10px;
+  color: var(--album-text-color);
+  margin-right: 5px;
+  font-weight: bold !important;
+}
+
+.star {
+  margin-top: 10px;
+  color: var(--star);
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: currentColor;
+  clip-path: polygon(
+    50% 0%,
+    63% 38%,
+    100% 38%,
+    69% 59%,
+    82% 100%,
+    50% 75%,
+    18% 100%,
+    31% 59%,
+    0% 38%,
+    37% 38%
+  );
+}
+.star.filled {
+  color: #ffc107;
+}
+.comment {
+  margin-top: 10px;
+  font-weight: 500;
+  color: var(--album-text-color);
+}
+
+.comment .font-weight-bold {
+  font-weight: bold;
+}
+
+.comment .comment-content {
+  color: #666;
+  font-style: italic;
+}
+
+@media only screen and (max-width: 768px) {
+  .album-cover {
+    height: 110px;
+    width: 110px;
+  }
+
+  .review-content {
+    margin-left: 20px;
+  }
+  .review-tile {
+    margin-left: 45px;
+    padding: 8px;
+  }
+}
+
+/* For screens with a maximum width of 480px */
+@media only screen and (max-width: 480px) {
+  .album-cover {
+    height: 100px;
+    width: 100px;
+  }
+
+  .review-content {
+    margin-left: 10px;
+  }
+  .review-tile {
+    margin-left: 20px;
+    padding: 5px;
+  }
+}

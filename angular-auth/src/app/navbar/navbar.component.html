@@ -1,0 +1,19 @@
+<div class='navbar-container'>
+  <i class="nav-icon pi pi-arrow-left" (click) = 'navigateBack()'></i>
+  <app-theme-switcher class='nav-link'></app-theme-switcher>
+  <a class='nav-link' (click)='navigateToHome()'>Home</a>
+  <a class='nav-link' (click)="navigateToReviews()" >Reviews</a>
+  <a *ngIf='authorizeService.isAuthenticated' class='nav-link' (click)="openProfile()">Profile</a>
+  <button *ngIf='!authorizeService.isAuthenticated' class='log-button' (click)="login()">
+    Login
+  </button>
+  <div *ngIf='authorizeService.isAuthenticated' class='dropdown'>
+    <button class='username' (click)="toggleDropdown()">
+      <img class = "navbar-avatar" [src]="avatar" alt="Avatar">
+
+      {{ authorizeService.userName }}</button>
+    <div class='dropdown-content' *ngIf='dropdownVisible'>   
+      <a class='logout-text' (click)="logout()">Logout</a>   
+    </div>
+  </div>
+</div>

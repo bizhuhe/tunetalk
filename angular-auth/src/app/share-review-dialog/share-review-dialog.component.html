@@ -1,0 +1,13 @@
+<div class = "dialog-container"> 
+<h2 class="dialog-title">Share the review to:</h2>
+<ng-container class = "email-list-container" *ngFor="let user of users">
+  <p class="user-name" (click)="emailSelected.emit(user.email)">
+    {{ user.name }}:
+    {{ user.email }}
+  </p>
+</ng-container>
+<mat-dialog-actions class="dialog-button-container">
+  <button class="dialog-button no-button" (click)="closeDialog()">Close</button>
+</mat-dialog-actions>
+</div>
+

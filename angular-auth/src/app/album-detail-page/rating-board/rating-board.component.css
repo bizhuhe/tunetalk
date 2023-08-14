@@ -1,0 +1,79 @@
+.rating-page-container {
+    margin-left:80px;
+    margin-right:50px
+  }
+  .rating-title{
+    margin-top: 80px;
+    font-size: 15px;
+    font-family: "Arial", sans-serif;
+    color: var(--album-label);
+  }
+  .average-rating{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Arial", sans-serif;
+    color:var(--album-title) ;
+  }
+  .rating-number{
+    margin-left: 20px;
+    color: #bdb4e9;
+  }
+  .rating-number-static-text{
+    color: grey;
+    
+  }
+  .rating-detail-text {
+    width:300px;
+    font-size: 15px;
+    font-family: "Arial", sans-serif;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    color:var( --album-text-color);
+  }.label {
+    color: var(--album-label);
+  }
+  .label, .bar-container, .bar, .percentage-text {
+    display: inline-block;
+    vertical-align: middle;  
+}
+
+.bar{
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 15px;
+    max-width: 150px;
+    background-color: #bdb4e9;
+}
+.one-star-bar {
+    margin-left: 12.5px !important;
+}
+
+  @media only screen and (max-width: 768px) {
+    .rating-page-container {
+        margin-left:30px;
+      }
+      .rating-title {
+      margin-top: 40px;
+    }
+   
+    .rating-detail-text {
+      font-size: 12px;
+  
+    }
+  }
+  
+  /* For screens with a maximum width of 480px */
+  @media only screen and (max-width: 480px) {
+    .rating-page-container {
+        margin-left:30px;
+      }
+      .rating-title {
+      margin-top: 40px;
+    }
+   
+    .rating-detail-text {
+      font-size: 12px;
+  
+    }
+  }
+  

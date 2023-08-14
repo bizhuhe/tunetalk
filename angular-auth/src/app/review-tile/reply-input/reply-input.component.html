@@ -1,0 +1,33 @@
+<div class="reply-display-container">
+    <!-- Display all the replies -->
+    <div *ngFor="let reply of replies">
+      <div class="reply-content">
+        <div class="reply-header">
+          <span class="user-name">
+            {{ reply.userName }}
+          </span>
+  
+          <span class="replied-at">
+            {{ reply.createdAt | date : "medium" }}
+          </span>
+          <p class="reply">
+            {{ reply.reply }}
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <form *ngIf="!formSubmitted" (ngSubmit)="submitForm(form)" #form="ngForm">
+      <div class = "reply-input-container">
+      <textarea
+        rows="4"
+        cols="50"
+        [(ngModel)]="reply.reply"
+        name="comment"
+        placeholder="Type your reply here..."
+      ></textarea>
+      <button class="submit-button" type="submit">Submit</button>
+  </div>
+    </form>
+  
+  </div>

@@ -1,0 +1,8 @@
+
+<label class="switch">
+    <input type="checkbox" [checked]="isDarkThemeEnabled" (change)="toggleTheme()">
+    <span class="slider round"></span>
+    <div [class]="isDarkThemeEnabled ? 'toggle-text toggle-text-dark' : 'toggle-text toggle-text-light'">
+      {{ isDarkThemeEnabled ? 'Dark Mode' : 'Light Mode' }}
+    </div>
+  </label>

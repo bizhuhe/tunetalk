@@ -1,0 +1,74 @@
+
+.review-input-container {
+    margin-left: 80px;
+    margin-top:20px;
+    max-width: 500px;
+
+}
+.submit-button {
+    background-color: #8a7ad2;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+.review-text{
+  color:var(  --album-text-color);
+}
+  .star-rating {
+    display: inline-block;
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .star-rating input {
+    display: none;
+  }
+  
+  .star-rating label {
+    color: #ddd;
+    font-size: 24px;
+    padding: 0 2px;
+    cursor: pointer;
+  }
+  
+  .star-rating label i {
+    transition: color 0.2s;
+  }
+  
+  .star-rating input:checked ~ label {
+    color: #ffcc00;
+  }
+  
+  .comment-container {
+    margin-top: 10px;
+  }
+  
+  .comment-container label {
+    display: block;
+  }
+  
+  .comment-container textarea {
+    width: 100%;
+    height: 100px;
+  }
+  @media only screen and (max-width: 768px) {
+    .review-input-container {
+        margin-left: 30px;
+        margin-top:20px;
+        max-width: 400px;
+    }
+    }
+  
+  /* For screens with a maximum width of 480px */
+  @media only screen and (max-width: 480px) {
+    .review-input-container {
+        margin-left: 22px;
+        margin-top:10px;
+        max-width: 270px;
+    
+    }
+  }

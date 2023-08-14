@@ -1,0 +1,72 @@
+<app-navbar></app-navbar>
+<div class="user-profile-container">
+  <h1 class="profile-title">Edit Profile</h1>
+  <div class="profile-container profile-form">
+    <form #userForm="ngForm" (ngSubmit)="updateAvatar(userForm)">
+      <div class="form-group">
+        <div class="avatar-edit-container">
+          <img class="avatar" [src]="user?.avatar" alt="User Avatar" />
+          <i class="pi pi-pencil pencil-icon" (click)="openAvatarInput()"></i>
+        </div>
+        <div class="avatar-input-control" *ngIf="editingAvatar">
+          <div class="profile-button-wrapper">
+            <input
+              type="file"
+              id="file"
+              (change)="onFileSelect($event)"
+              style="display: none"
+            />
+            <label for="file" class="profile-button">Choose File</label>
+          </div>
+          <p *ngIf="selectedFileName" class="centered-text">
+            Selected File: {{ selectedFileName }}
+          </p>
+          <button class="profile-button" type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+    <div class="form-group flex flex-row">
+      <label class="profile-text" for="email">Email:</label>
+      <span class="rendered-text">{{ user?.email }}</span>
+    </div>
+    <div class="form-group flex flex-row">
+      <label class="profile-text" for="name">Username:</label>
+      <span class="rendered-text"> {{ user?.name }} </span>
+    </div>
+    <form #bioForm="ngForm" (ngSubmit)="updateBio(userForm)">
+      <div class="form-group bio-container">
+        <div class="bio-content">
+          <label class="profile-text" for="bio">Bio:</label>
+          <span class="rendered-text">  {{ user?.bio }}</span>
+          <i class="pi pi-pencil pencil-icon" (click)="openBioInput()"></i>
+        </div>
+        <div class="bio-edit-container" *ngIf="editingBio">
+          <textarea
+            class="fixed-bio-width"
+            id="bio"
+            name="bio"
+            [(ngModel)]="user.bio"
+          ></textarea>
+        </div>
+        <div class="bio-edit-container" *ngIf="editingBio">
+          <button type="submit" class="profile-button">Save Changes</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="my-review-header">
+    <h1 class="my-review-title">My Reviews</h1>
+  </div>
+  <div class="review-tile-margin">
+    <app-review-tile
+      class="reviews-page-container"
+      *ngFor="let review of reviewDataService.reviews"
+      [review]="review"
+      [currentUser]="authorizeService.currentUser"
+      (reviewDeleted)="handleReviewDeleted()"
+      (editingChange)="handleEditingChange($event)"
+    >
+    </app-review-tile>
+  </div>
+</div>
+

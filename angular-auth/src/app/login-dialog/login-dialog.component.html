@@ -1,0 +1,7 @@
+<h2 class="dialog-title">Login Required</h2>
+<!-- <mat-dialog-content class="dialog-content">Please login to create a review.</mat-dialog-content> -->
+<mat-dialog-content class="dialog-content">{{ data.dialogMessage }}</mat-dialog-content>
+<mat-dialog-actions class="dialog-button-container">
+  <button class="dialog-button no-button" (click)="closeDialog()">Close</button>
+  <button class="dialog-button yes-button" (click)="login()">Login</button>
+</mat-dialog-actions>
